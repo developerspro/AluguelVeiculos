@@ -10,6 +10,40 @@ namespace AluguelVeiculos
     {
         public double cargaMax;
         public bool bau;
+        public string tembau;
+
+        public override void cadastrarAutomovel()
+        {
+            Console.WriteLine("-- Cadastro Utilitário --");
+            base.cadastrarAutomovel();
+            Console.WriteLine("Carga maxima");
+            cargaMax = double.Parse(Console.ReadLine());
+            Console.WriteLine("Tem bau?[s/n]");
+            tembau = Console.ReadLine();
+            if (tembau.ToLower().Equals("s"))
+            {
+                bau = true;
+            } else
+            {
+                bau = false;
+            }
+
+        }
+        public override void visualizarAutomovel()
+        {
+            base.visualizarAutomovel();
+            Console.WriteLine("Carga maxima: {0}",cargaMax);
+            if (bau == true)
+            {
+                tembau = "sim";
+            } else
+            {
+                tembau = "nao";
+            }
+            Console.WriteLine("Tem bau:{0}",tembau);
+
+
+        }
     }
 
 }
