@@ -9,5 +9,6 @@ namespace AluguelVeiculos
     class Carro : Automovel
     {
         public int portaMala;
+
     }
 }
