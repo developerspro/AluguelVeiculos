@@ -10,6 +10,19 @@ namespace AluguelVeiculos
     {
         static void Main(string[] args)
         {
+            Cliente c = new Cliente();
+            c.cadastrarCliente();
+            c.mostrarCadastro();
+
+            Locacao l = new Locacao();
+            l.cadastrarLocacao(c.nomeCliente());
+
+
+
+
+            Console.ReadKey();
+
+    
         }
     }
 }
