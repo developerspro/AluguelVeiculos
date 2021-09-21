@@ -29,6 +29,13 @@ namespace AluguelVeiculos
         {
             Console.WriteLine("Informe o valor da multa");
             multa = double.Parse(Console.ReadLine());
+            if (multa > 0)
+            {
+
+            } else
+            {
+                multa = 0;
+            }
         }
 
         public void mostrarMulta()
