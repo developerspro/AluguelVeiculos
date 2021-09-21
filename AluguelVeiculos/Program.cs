@@ -13,12 +13,20 @@ namespace AluguelVeiculos
             Cliente c = new Cliente();
             Automovel auto = new Automovel();
             Utilitario util = new Utilitario();
-            util.cadastrarAutomovel();
-            util.visualizarAutomovel();
+            Carro cr = new Carro();
+            Esporte es = new Esporte();
+            es.cadastrarAutomovel();
+            es.visualizarAutomovel();
+
+            cr.cadastrarAutomovel();
+            cr.visualizarAutomovel();
+            
 
            // auto.cadastrarAutomovel();
             c.cadastrarCliente();
             c.mostrarCadastro();
+            util.cadastrarAutomovel();
+            util.visualizarAutomovel();
 
             Locacao l = new Locacao();
             l.cadastrarLocacao(c.nomeCliente());

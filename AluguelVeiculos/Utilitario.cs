@@ -9,8 +9,8 @@ namespace AluguelVeiculos
     class Utilitario : Automovel
     {
         public double cargaMax;
-        public bool bau;
-        public string tembau;
+        private bool bau;
+        private string tembau;
 
         public override void cadastrarAutomovel()
         {

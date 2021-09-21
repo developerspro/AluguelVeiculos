@@ -8,12 +8,12 @@ namespace AluguelVeiculos
 {
     class Cliente
     {
-        public string nome;
-        public double cpf;
-        public double cep;
-        public double cnh;
-        public double telefone;
-        public string email;
+        private string nome;
+        private double cpf;
+        private double cep;
+        private double cnh;
+        private double telefone;
+        private string email;
 
         public void cadastrarCliente()
         {

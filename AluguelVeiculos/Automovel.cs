@@ -8,14 +8,26 @@ namespace AluguelVeiculos
 {
     class Automovel
     {
-        public string modelo;
-        public DateTime ano;
-        public string placa;
-        public string cor;
-        public double renavam;
-        public double km;
-        public string marca;
-        public string chassi;
+        private string modelo;
+        private DateTime ano;
+        private string placa;
+        private string cor;
+        private double renavam;
+        private double km;
+        private string marca;
+        private string chassi;
+
+
+        private void validaKm(double valor)
+        {
+            if (valor < 0)
+            {
+                km = 0; 
+            } else
+            {
+                km = valor;
+            }
+        }
 
         public virtual void cadastrarAutomovel()
         {
@@ -30,7 +42,7 @@ namespace AluguelVeiculos
             Console.WriteLine("Digite o renavam");
             renavam = double.Parse(Console.ReadLine());
             Console.WriteLine("Digite o km");
-            km = double.Parse(Console.ReadLine());
+            validaKm(double.Parse(Console.ReadLine()));
             Console.WriteLine("Digite o marca");
             marca = Console.ReadLine();
             Console.WriteLine("Digite o chassi");
@@ -49,5 +61,7 @@ namespace AluguelVeiculos
             Console.WriteLine("Marca: {0}", marca);
             Console.WriteLine("Chassi: {0}", chassi);
         }
+
+
     }
 }

@@ -16,7 +16,7 @@ namespace AluguelVeiculos
             base.cadastrarAutomovel();
             Console.WriteLine("Tamanho do porta malas");
             portaMala = int.Parse(Console.ReadLine());
-
+            
         }
 
         public override void visualizarAutomovel()
@@ -25,5 +25,6 @@ namespace AluguelVeiculos
             Console.WriteLine("Tamanho do porta malas:{0}",portaMala);
 
         }
+      
     }
 }

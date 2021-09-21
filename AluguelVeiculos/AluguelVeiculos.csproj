@@ -46,6 +46,7 @@
     <Compile Include="Automovel.cs" />
     <Compile Include="Carro.cs" />
     <Compile Include="Cliente.cs" />
+    <Compile Include="Esporte.cs" />
     <Compile Include="Locacao.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
