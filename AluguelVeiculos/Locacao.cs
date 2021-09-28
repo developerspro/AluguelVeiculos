@@ -16,9 +16,9 @@ namespace AluguelVeiculos
         public double multa;
         public string nomeCliente; 
 
-        public void cadastrarLocacao(string n)
+        public void cadastrarLocacao()
         {
-            nomeCliente = n;
+            
             datainicial = DateTime.Now;
             Console.WriteLine(datainicial.Date);
             Console.WriteLine("Digite o motivo da locacao");

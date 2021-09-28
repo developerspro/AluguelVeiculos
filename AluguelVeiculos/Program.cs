@@ -10,29 +10,52 @@ namespace AluguelVeiculos
     {
         static void Main(string[] args)
         {
-            Cliente c = new Cliente();
-            Automovel auto = new Automovel();
-            Utilitario util = new Utilitario();
-            Carro cr = new Carro();
-            Esporte es = new Esporte();
-            es.cadastrarAutomovel();
-            es.visualizarAutomovel();
-
-            cr.cadastrarAutomovel();
-            cr.visualizarAutomovel();
-            
-
-           // auto.cadastrarAutomovel();
-            c.cadastrarCliente();
-            c.mostrarCadastro();
-            util.cadastrarAutomovel();
-            util.visualizarAutomovel();
-
-            Locacao l = new Locacao();
-            l.cadastrarLocacao(c.nomeCliente());
-            Console.ReadKey();
-
-    
+            string opcao;
+            Menu menu = new Menu();
+            Cliente cliente = new Cliente();
+            do
+            {
+                opcao = menu.menu();
+                switch (opcao)
+                {
+                    case "1":
+                        Console.WriteLine("Cadastrar Cliente");
+                        cliente.cadastrarCliente();
+                        Console.ReadKey();
+                        break;
+                    case "2":
+                        Console.WriteLine("Cadastrar Carro");
+                        Carro carro = new Carro();
+                        carro.cadastrarAutomovel();
+                        break;
+                    case "3":
+                        Console.WriteLine("Cadastrar Van");
+                        Vans van = new Vans();
+                        van.cadastrarAutomovel();
+                        break;
+                    case "4":
+                        Console.WriteLine("Cadastrar Utilitario");
+                        Utilitario utilitario = new Utilitario();
+                        utilitario.cadastrarAutomovel();
+                        break;
+                    case "5":
+                        Console.WriteLine("Fazer a Locaçao");
+                        Locacao locacao = new Locacao();
+                        locacao.cadastrarLocacao();
+                        break;
+                    case "6":
+                        cliente.mostrarCadastro();
+                        Console.ReadKey();
+                        break;
+                    case "Q":
+                        Console.WriteLine("Encerrando o programa");
+                        break;
+                    default:
+                        Console.WriteLine("Opcao invalida!");
+                        break;
+                }
+            } while (opcao != "Q");
+            //Environment.Exit(0);
         }
     }
 }
